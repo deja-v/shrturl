@@ -11,7 +11,7 @@ connectDB();
 
 const allowedOrigins = [
     'http://localhost:5173', // Local frontend during development
-    'https://shortly-jade-tau.vercel.app/', // Deployed frontend
+    'https://shortly-jade-tau.vercel.app', // Deployed frontend
   ];
   
   app.use(
