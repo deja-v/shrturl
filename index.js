@@ -1,5 +1,5 @@
 import 'dotenv/config'
-import express, { urlencoded } from 'express';
+import express from 'express';
 import connectDB from './connection.js';
 import urlRouter from './routes/url.js';
 const app = express();
@@ -10,6 +10,8 @@ connectDB();
 
 app.use(express.urlencoded({extended:false}))
 
-app.use('/', urlRouter);
+app.use(express.json());
+
+app.use('/api', urlRouter);
 
 app.listen(port, () => {console.log('Server is running on port ', port)});

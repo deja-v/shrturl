@@ -11,7 +11,6 @@ async function handleCreateShortUrl(req,res){
             shortId: nanoid(10),
             redirectUrl: body.url,
         })
-        console.log(result)
         res.json(result)
     } catch (error) {
         res.status(400).send("error creating Short Url")
