@@ -8,10 +8,10 @@ const port = process.env.PORT || 8000;
 //connection
 connectDB();
 
-app.use(cors({
-    origin: 'https://shortly-jade-tau.vercel.app/', 
-    methods: 'GET,POST,PUT,DELETE',
-}));
+// app.use(cors({
+//     origin: 'https://shortly-jade-tau.vercel.app/', 
+//     methods: 'GET,POST,PUT,DELETE',
+// }));
 
 app.use(express.urlencoded({extended:false}))
 
